@@ -1,0 +1,13 @@
+mode: atomic
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:20.48,24.23 3 9
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:30.2,30.23 1 9
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:36.2,51.18 7 9
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:55.2,55.16 1 9
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:64.2,64.12 1 9
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:24.23,26.3 1 8
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:26.3,28.3 1 1
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:30.23,32.3 1 8
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:32.3,34.3 1 1
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:51.18,53.3 1 7
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:55.16,60.3 3 4
+github.com/cloudfoundry-incubator/garden-linux/logging/runner.go:60.3,62.3 1 5

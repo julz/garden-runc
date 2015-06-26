@@ -1,0 +1,10 @@
+---
+image: docker:///cloudfoundry/garden-ci-ubuntu
+
+platform: linux
+
+inputs:
+- name: garden-runc
+
+run:
+  path: garden-runc/script/test-in-concourse

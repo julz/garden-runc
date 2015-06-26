@@ -1,0 +1,24 @@
+#!/bin/sh
+
+
+export GOROOT=/usr/local/go
+export PATH=$GOROOT/bin:$PATH
+
+export GOPATH=$PWD/gopath
+export PATH=/go/bin:/usr/local/go/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
+
+mkdir -p $GOPATH/src/github.com/julz
+cp -r garden-runc $GOPATH/src/github.com/julz/garden-runc
+
+cd $(dirname $0)/..
+
+go get github.com/onsi/ginkgo/ginkgo
+
+# apt-get update
+# apt-get -y install wget cgroup-lite
+# wget -qO- https://get.docker.com/ | sh
+
+mkdir -p /sys/fs
+
+./script/test-in-container "$@"

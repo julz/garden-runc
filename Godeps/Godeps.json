@@ -1,0 +1,155 @@
+{
+	"ImportPath": "github.com/julz/garden-runc",
+	"GoVersion": "go1.4",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.7.3-2-g26709e2",
+			"Rev": "26709e2714106fb8ad40b773b711ebce25b78914"
+		},
+		{
+			"ImportPath": "github.com/bmizerany/pat",
+			"Rev": "b8a35001b773c267eb260a691f4e5499a3531600"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry-incubator/cf-lager",
+			"Rev": "07421479102894f2f48b0245dab5c933aaf25b7b"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry-incubator/garden",
+			"Comment": "go-wshd-720-gdd6b2d5",
+			"Rev": "dd6b2d5f923feec84a3e144805ce65e302af75ac"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry-incubator/garden-linux/container_daemon",
+			"Rev": "d14a2dc3236df7b5aa7a28b5eb98aa08c6fc0939"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry-incubator/garden-linux/containerizer/system",
+			"Rev": "d14a2dc3236df7b5aa7a28b5eb98aa08c6fc0939"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry-incubator/garden-linux/iodaemon",
+			"Rev": "d14a2dc3236df7b5aa7a28b5eb98aa08c6fc0939"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry-incubator/garden-linux/logging",
+			"Rev": "d14a2dc3236df7b5aa7a28b5eb98aa08c6fc0939"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry-incubator/garden-linux/port_pool",
+			"Rev": "d14a2dc3236df7b5aa7a28b5eb98aa08c6fc0939"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry-incubator/garden-linux/process",
+			"Rev": "d14a2dc3236df7b5aa7a28b5eb98aa08c6fc0939"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry-incubator/garden-linux/process_tracker",
+			"Rev": "d14a2dc3236df7b5aa7a28b5eb98aa08c6fc0939"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry/gunk/command_runner",
+			"Rev": "de79b69f590594db2b9771018784c55251d5e7e7"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry/gunk/localip",
+			"Rev": "de79b69f590594db2b9771018784c55251d5e7e7"
+		},
+		{
+			"ImportPath": "github.com/codegangsta/cli",
+			"Comment": "1.2.0-107-g942282e",
+			"Rev": "942282e931e8286aa802a30b01fa7e16befb50f3"
+		},
+		{
+			"ImportPath": "github.com/coreos/go-systemd/dbus",
+			"Comment": "v2",
+			"Rev": "f743bc15d6bddd23662280b4ad20f7c874cdd5ad"
+		},
+		{
+			"ImportPath": "github.com/docker/docker/pkg/mount",
+			"Comment": "v1.4.1-4127-gb81f2ee",
+			"Rev": "b81f2ee5f20d094c13893f565ce716595c539d22"
+		},
+		{
+			"ImportPath": "github.com/docker/docker/pkg/symlink",
+			"Comment": "v1.4.1-4127-gb81f2ee",
+			"Rev": "b81f2ee5f20d094c13893f565ce716595c539d22"
+		},
+		{
+			"ImportPath": "github.com/docker/docker/pkg/term",
+			"Comment": "v1.4.1-4127-gb81f2ee",
+			"Rev": "b81f2ee5f20d094c13893f565ce716595c539d22"
+		},
+		{
+			"ImportPath": "github.com/docker/docker/pkg/units",
+			"Comment": "v1.4.1-4127-gb81f2ee",
+			"Rev": "b81f2ee5f20d094c13893f565ce716595c539d22"
+		},
+		{
+			"ImportPath": "github.com/docker/libcontainer/user",
+			"Comment": "v1.2.0-162-g7ce34f5",
+			"Rev": "7ce34f58cbd4884634a0f1f82c4aaab1168ea0de"
+		},
+		{
+			"ImportPath": "github.com/docker/libnetwork/iptables",
+			"Comment": "v0.2-233-g7d501b2",
+			"Rev": "7d501b2b73641327e50b43cc5e72341961f5a404"
+		},
+		{
+			"ImportPath": "github.com/godbus/dbus",
+			"Comment": "v2",
+			"Rev": "88765d85c0fdadcd98a54e30694fa4e4f5b51133"
+		},
+		{
+			"ImportPath": "github.com/golang/protobuf/proto",
+			"Rev": "f7137ae6b19afbfd61a94b746fda3b3fe0491874"
+		},
+		{
+			"ImportPath": "github.com/kr/pty",
+			"Comment": "release.r56-19-g67e2db2",
+			"Rev": "67e2db24c831afa6c64fc17b4a143390674365ef"
+		},
+		{
+			"ImportPath": "github.com/nu7hatch/gouuid",
+			"Rev": "179d4d0c4d8d407a32af483c2354df1d2c91e6c3"
+		},
+		{
+			"ImportPath": "github.com/onsi/ginkgo",
+			"Comment": "v1.1.0-38-g5ed93e4",
+			"Rev": "5ed93e443a4b7dfe9f5e95ca87e6082e503021d2"
+		},
+		{
+			"ImportPath": "github.com/onsi/gomega",
+			"Comment": "v1.0-39-gc853a76",
+			"Rev": "c853a76367c700fe446c27bc7e6fc8209ee4e0a1"
+		},
+		{
+			"ImportPath": "github.com/opencontainers/runc",
+			"Rev": "15ed8ff7b1ca8c8991dfb93e0e7509074dcb4697"
+		},
+		{
+			"ImportPath": "github.com/pivotal-golang/lager",
+			"Rev": "09a71f6eb2dcc1c2335e37ceb78a91c6f618d561"
+		},
+		{
+			"ImportPath": "github.com/syndtr/gocapability/capability",
+			"Rev": "e55e5833692b49e49a0073ad5baf7803f21bebf4"
+		},
+		{
+			"ImportPath": "github.com/tedsuo/ifrit",
+			"Rev": "de3fd329cd527778e808a8bad04309baa0b58eeb"
+		},
+		{
+			"ImportPath": "github.com/tedsuo/rata",
+			"Rev": "9946bb39c19484e199efb807da145063323e6502"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ssh/terminal",
+			"Rev": "c10c31b5e94b6f7a0283272dc2bb27163dcea24b"
+		}
+	]
+}
