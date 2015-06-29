@@ -29,7 +29,7 @@ var _ = Describe("garden-runc", func() {
 		}, garden.ProcessIO{Stdout: io.MultiWriter(GinkgoWriter, stdout), Stderr: GinkgoWriter})
 
 		Expect(err).NotTo(HaveOccurred())
-		Eventually(stdout).Should(gbytes.Say("foo"))
+		Eventually(stdout, "2s").Should(gbytes.Say("foo"))
 	})
 
 	It("can be pinged", func() {

@@ -52,6 +52,10 @@
 			"Rev": "d14a2dc3236df7b5aa7a28b5eb98aa08c6fc0939"
 		},
 		{
+			"ImportPath": "github.com/cloudfoundry-incubator/garden-linux/system",
+			"Rev": "d14a2dc3236df7b5aa7a28b5eb98aa08c6fc0939"
+		},
+		{
 			"ImportPath": "github.com/cloudfoundry/gunk/command_runner",
 			"Rev": "de79b69f590594db2b9771018784c55251d5e7e7"
 		},
@@ -71,6 +75,11 @@
 		},
 		{
 			"ImportPath": "github.com/docker/docker/pkg/mount",
+			"Comment": "v1.4.1-4127-gb81f2ee",
+			"Rev": "b81f2ee5f20d094c13893f565ce716595c539d22"
+		},
+		{
+			"ImportPath": "github.com/docker/docker/pkg/reexec",
 			"Comment": "v1.4.1-4127-gb81f2ee",
 			"Rev": "b81f2ee5f20d094c13893f565ce716595c539d22"
 		},

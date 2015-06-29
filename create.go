@@ -64,6 +64,13 @@ func (c *RuncContainerCreator) Create(spec garden.ContainerSpec) (*Container, er
 			Path:     "rootfs",
 			Readonly: false,
 		},
+		Capabilities: []string{
+			"AUDIT_WRITE",
+			"KILL",
+			"NET_BIND_SERVICE",
+			"SETUID",
+			"SETGID",
+		},
 		Namespaces: []runc.Namespace{
 			{
 				Type: "process",
@@ -137,6 +144,7 @@ func (c *RuncContainerCreator) Create(spec garden.ContainerSpec) (*Container, er
 				Destination: "/run/garden",
 				Options:     "bind",
 			}},
+
 		Processes: []*runc.Process{{
 			// User: "root",
 			// Args: []string{

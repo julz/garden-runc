@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os/exec"
 	osuser "os/user"
+	"syscall"
 
 	"github.com/cloudfoundry-incubator/garden"
 	"github.com/cloudfoundry-incubator/garden-linux/process"
@@ -27,14 +28,19 @@ type ProcessSpecPreparer struct {
 }
 
 func (p *ProcessSpecPreparer) PrepareCmd(spec garden.ProcessSpec) (*exec.Cmd, error) {
+	// rlimitsEnv := p.Rlimits.EncodeLimits(spec.Limits)
+	// dropCapsArg := fmt.Sprintf("-dropCapabilities=%t", p.AlwaysDropCapabilities || spec.User != "root")
+	// extendedWhitelistArg := fmt.Sprintf("-extendedWhitelist=%t", !p.AlwaysDropCapabilities)
+	// rlimitArg := fmt.Sprintf("-rlimits=%s", rlimitsEnv)
+
 	usr, err := p.parseUser(spec.User)
 	if err != nil {
-		return nil, fmt.Errorf("container_daemon: %s", err)
+		return nil, fmt.Errorf("container_daemon: prepare_cmd: parse_user: %s", err)
 	}
 
 	env, err := createEnvironment(spec.Env, usr)
 	if err != nil {
-		return nil, fmt.Errorf("container_daemon: %s", err)
+		return nil, fmt.Errorf("container_daemon: prepare_cmd: create_environment: %s", err)
 	}
 
 	dir := spec.Dir
@@ -42,13 +48,25 @@ func (p *ProcessSpecPreparer) PrepareCmd(spec garden.ProcessSpec) (*exec.Cmd, er
 		dir = usr.homeDir
 	}
 
-	cmd := exec.Command(spec.Path, spec.Args...)
+	// args := append([]string{
+	// 	dropCapsArg,
+	// 	extendedWhitelistArg,
+	// 	rlimitArg,
+	// 	// fmt.Sprintf("-uid=%d", usr.uid),
+	// 	// fmt.Sprintf("-gid=%d", usr.gid),
+	// }, "--", spec.Path)
+	// args = append(args, spec.Args...)
+	// cmd := exec.Command(p.ProcStarterPath, args...)
+	// cmd.Env = env.Array()
+	// cmd.Dir = dir
+
+	cmd := exec.Command("/garden-bin/initd", append([]string{"proc_starter", spec.Path}, spec.Args...)...)
 	cmd.Env = env.Array()
 	cmd.Dir = dir
-	// cmd.SysProcAttr = &syscall.SysProcAttr{Credential: &syscall.Credential{
-	// 	Uid: usr.uid,
-	// 	Gid: usr.gid,
-	// }}
+	cmd.SysProcAttr = &syscall.SysProcAttr{Credential: &syscall.Credential{
+		Uid: usr.uid,
+		Gid: usr.gid,
+	}}
 
 	return cmd, nil
 }
